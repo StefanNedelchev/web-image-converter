@@ -1,0 +1,50 @@
+{
+  "name": "web-image-converter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.html",
+  "scripts": {
+    "build": "node scripts/build.mjs prod",
+    "build:dev": "node scripts/build.mjs dev",
+    "dev": "vite src/",
+    "lint": "eslint \"**/*.{html,js,mjs,ts}\"",
+    "lint:fix": "npm run lint -- --fix",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "keywords": [
+    "convertor",
+    "image",
+    "resizer",
+    "image convertor",
+    "web",
+    "web3",
+    "pwa"
+  ],
+  "author": "Stefan Nedelchev",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@stylistic/eslint-plugin": "^5.7.0",
+    "@vitest/coverage-v8": "^4.0.18",
+    "esbuild": "^0.27.2",
+    "eslint": "^9.39.2",
+    "globals": "^17.0.0",
+    "happy-dom": "^20.3.5",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.53.1",
+    "vite": "^7.3.1",
+    "vitest": "^4.0.17",
+    "workbox-build": "^7.4.0",
+    "workbox-cacheable-response": "^7.4.0",
+    "workbox-core": "^7.4.0",
+    "workbox-expiration": "^7.4.0",
+    "workbox-precaching": "^7.4.0",
+    "workbox-routing": "^7.4.0",
+    "workbox-strategies": "^7.4.0",
+    "workbox-window": "^7.4.0"
+  }
+}
