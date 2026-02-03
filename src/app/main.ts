@@ -134,7 +134,17 @@ async function convertOne(id: string, optionsOverride?: ConversionOptions): Prom
   item.error = undefined;
   render();
 
-  const options = optionsOverride ?? readOptions();
+  let options = optionsOverride ?? readOptions();
+
+  // If in pixels mode with no width/height specified, use the image's original dimensions
+  if (options.sizeMode === 'pixels' && !options.w && !options.h && item.width && item.height) {
+    options = {
+      ...options,
+      w: item.width,
+      h: item.height,
+    };
+  }
+
   await convertImage(item, options);
   render();
 }
