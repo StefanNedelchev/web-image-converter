@@ -13,6 +13,6 @@ export const CANDIDATE_EXPORT_MIMES = [
 
 /** Browser API support detection */
 export const supports = {
-  createImageBitmap: typeof createImageBitmap === 'function',
-  offscreenCanvas: typeof OffscreenCanvas !== 'undefined',
+  createImageBitmap: (): boolean => typeof createImageBitmap === 'function',
+  offscreenCanvas: (): boolean => typeof OffscreenCanvas !== 'undefined',
 };

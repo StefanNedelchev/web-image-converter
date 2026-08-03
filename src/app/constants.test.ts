@@ -11,19 +11,19 @@ describe('constants', () => {
       expect(supports).toHaveProperty('offscreenCanvas');
     });
 
-    it('should have boolean values', () => {
-      expect(typeof supports.createImageBitmap).toBe('boolean');
-      expect(typeof supports.offscreenCanvas).toBe('boolean');
+    it('should return boolean values', () => {
+      expect(typeof supports.createImageBitmap()).toBe('boolean');
+      expect(typeof supports.offscreenCanvas()).toBe('boolean');
     });
 
     it('should detect createImageBitmap correctly', () => {
       const hasCreateImageBitmap = typeof createImageBitmap === 'function';
-      expect(supports.createImageBitmap).toBe(hasCreateImageBitmap);
+      expect(supports.createImageBitmap()).toBe(hasCreateImageBitmap);
     });
 
     it('should detect OffscreenCanvas correctly', () => {
       const hasOffscreenCanvas = typeof OffscreenCanvas !== 'undefined';
-      expect(supports.offscreenCanvas).toBe(hasOffscreenCanvas);
+      expect(supports.offscreenCanvas()).toBe(hasOffscreenCanvas);
     });
   });
 });

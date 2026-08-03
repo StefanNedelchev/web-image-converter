@@ -146,7 +146,7 @@ describe('canvas', () => {
         }
       }
 
-      vi.stubGlobal('Image', MockImage as never);
+      vi.stubGlobal('Image', MockImage);
 
       const result = await decodeImage(file);
 
@@ -173,7 +173,7 @@ describe('canvas', () => {
         }
       }
 
-      vi.stubGlobal('Image', MockImage as never);
+      vi.stubGlobal('Image', MockImage);
 
       await decodeImage(file);
 

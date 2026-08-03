@@ -8,7 +8,7 @@ import type { Canvas, DecodedImage } from './types';
  * @returns Canvas instance
  */
 export function makeCanvas(width: number, height: number): Canvas {
-  if (supports.offscreenCanvas) {
+  if (supports.offscreenCanvas()) {
     return new OffscreenCanvas(width, height);
   }
   const canvas = document.createElement('canvas');
@@ -60,7 +60,7 @@ export async function canvasToBlob(
  */
 export async function decodeImage(file: File): Promise<DecodedImage> {
   // Fast decode path
-  if (supports.createImageBitmap) {
+  if (supports.createImageBitmap()) {
     // imageOrientation: from-image is supported by many modern browsers; ignored if unsupported.
     const bmp = await createImageBitmap(file, {
       imageOrientation: 'from-image',

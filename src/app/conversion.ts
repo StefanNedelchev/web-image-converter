@@ -137,7 +137,7 @@ async function maybeResizeBitmap(
   destHeight: number,
   options: ConversionOptions,
 ): Promise<ImageBitmap> {
-  if (!supports.createImageBitmap) {
+  if (!supports.createImageBitmap()) {
     return bmp;
   }
   if (options.bmpResizeQuality === 'off') {

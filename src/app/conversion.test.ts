@@ -38,7 +38,7 @@ describe('conversion', () => {
         width: 100,
         height: 100,
         close: vi.fn(),
-      } as never,
+      },
       width: 100,
       height: 100,
     });
@@ -303,7 +303,7 @@ describe('conversion', () => {
           width: 200,
           height: 100,
           close: vi.fn(),
-        } as never,
+        },
         width: 200,
         height: 100,
       });
@@ -325,7 +325,7 @@ describe('conversion', () => {
           width: 200,
           height: 100,
           close: vi.fn(),
-        } as never,
+        },
         width: 200,
         height: 100,
       });
@@ -358,7 +358,7 @@ describe('conversion', () => {
 
       vi.spyOn(canvasModule, 'decodeImage').mockResolvedValue({
         kind: 'bitmap',
-        bmp: mockBitmap as never,
+        bmp: mockBitmap,
         width: 100,
         height: 100,
       });
@@ -382,7 +382,7 @@ describe('conversion', () => {
           width: 100,
           height: 200,
           close: vi.fn(),
-        } as never,
+        },
         width: 100,
         height: 200,
       });
@@ -404,7 +404,7 @@ describe('conversion', () => {
           width: 100,
           height: 200,
           close: vi.fn(),
-        } as never,
+        },
         width: 100,
         height: 200,
       });
@@ -438,7 +438,7 @@ describe('conversion', () => {
           width: 100,
           height: 100,
           close: vi.fn(),
-        } as never,
+        },
         width: 100,
         height: 100,
       });
@@ -462,7 +462,7 @@ describe('conversion', () => {
           width: 100,
           height: 100,
           close: vi.fn(),
-        } as never,
+        },
         width: 100,
         height: 100,
       });
@@ -510,7 +510,7 @@ describe('conversion', () => {
           width: 100,
           height: 100,
           close: mockClose,
-        } as never,
+        },
         width: 100,
         height: 100,
       });

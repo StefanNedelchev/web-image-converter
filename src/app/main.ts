@@ -342,8 +342,8 @@ async function init(): Promise<void> {
   }
 
   // Check for bitmap resize support
-  bmpResizeQualitySel.disabled = !supports.createImageBitmap;
-  if (!supports.createImageBitmap) {
+  bmpResizeQualitySel.disabled = !supports.createImageBitmap();
+  if (bmpResizeQualitySel.disabled) {
     bmpResizeQualitySel.value = 'off';
   }
 
@@ -355,10 +355,10 @@ async function init(): Promise<void> {
         .map((mimeType) => `<code>${escapeHtml(mimeType)}</code>`)
         .join(', ')
     : 'none';
-  const decoder = supports.createImageBitmap
+  const decoder = supports.createImageBitmap()
     ? 'createImageBitmap'
     : 'HTMLImageElement';
-  const encoder = supports.offscreenCanvas
+  const encoder = supports.offscreenCanvas()
     ? 'OffscreenCanvas'
     : 'HTMLCanvasElement';
 
